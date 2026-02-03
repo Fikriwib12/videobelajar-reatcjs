@@ -1,12 +1,12 @@
-import { useState } from 'react'
-
 import Navbar from './components/Navbar'
 import indoFlag from './assets/images/indoFlag.svg'
 import logoGoogle from './assets/images/logo-google.svg'
+import eye from './assets/images/eye-solid-full.svg'
+import eyeSlash from './assets/images/eye-slash-solid-full.svg'
 // import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
@@ -39,7 +39,10 @@ function App() {
           <input type="number" id='noHp' className='border border-[#3A35411F] w-full p-3 rounded-md '/>
           </div>
           <label htmlFor="password" className='font-[Poppins]'>Kata Sandi <span className='text-red-500'>*</span></label>
+          <div className='relative'>
           <input type="password" name="password" id="password" className='border border-[#3A35411F] w-full p-3 rounded-md mb-4' />
+          <img src={eyeSlash} alt="" className='w-6 absolute right-2 top-3' />
+          </div>
           <label htmlFor="confirmPassword" className='font-[Poppins]'>Konfirmasi Kata Sandi <span className='text-red-500'>*</span></label>
           <input type="password" name="confirmPassword" id="confirmPassword" className='border border-[#3A35411F] w-full p-3 rounded-md mb-4' />
           <div className='text-right mb-6'>
@@ -47,7 +50,7 @@ function App() {
           </div>
           <button className='bg-[#3ecf4c] w-full p-3 font-[DM_Sans] font-bold text-white rounded-[10px] mb-4'>Daftar</button>
           <button className='bg-[#e2fcd9cc] w-full p-3 font-[DM_Sans] font-bold text-[#3ecf4c] rounded-[10px]'>Masuk</button>
-          <div className='w-full flex justify-center items-center gap-3 mt-[24px] mb-[24px]'>
+          <div className='w-full flex justify-center items-center gap-3 my-6'>
             <span className='w-full h-0.5 bg-[#F1F1F1]'></span>
             <span>atau</span>
             <span className='w-full h-0.5 bg-[#F1F1F1]'> </span>
