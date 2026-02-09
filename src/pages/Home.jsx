@@ -2,12 +2,12 @@ import Navbar from "../components/Navbar";
 import Person from "../assets/images/person.webp";
 import Hamburger from "../assets/images/hamburger.svg";
 import Hero from "../container/Hero";
-
 import Course from "../container/Course";
 import Cta from "../container/Cta";
-
 import { useState, useRef } from "react";
 import Footer from "../components/Footer";
+import { NavLink } from "react-router";
+import iconLogout from "../assets/images/keluar.svg";
 
 const Home = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -63,14 +63,14 @@ const Home = () => {
                   Pesanan Saya
                 </a>
                 <div className="border-t border-gray-200 my-2"></div>
-                <div>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-red-600 hover:bg-gray-100 transition-colors"
-                  >
-                    Keluar
-                  </a>
-                </div>
+                <NavLink to={"/login"}>
+                  <div className="flex hover:bg-gray-100">
+                    <a className="block px-4 py-2 text-red-600  transition-colors">
+                      Keluar
+                    </a>
+                    <img src={iconLogout} alt="" />
+                  </div>
+                </NavLink>
               </div>
             )}
           </div>
@@ -112,14 +112,14 @@ const Home = () => {
                 Pesanan Saya
               </a>
               <div className="border-t border-gray-200 my-2"></div>
-              <div>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-red-600 hover:bg-gray-100 transition-colors"
-                >
-                  Keluar
-                </a>
-              </div>
+              <NavLink to={"/login"}>
+                <div className="flex hover:bg-gray-100">
+                  <a className="block px-4 py-2 text-red-600  transition-colors">
+                    Keluar
+                  </a>
+                  <img src={iconLogout} alt="" />
+                </div>
+              </NavLink>
             </div>
           )}
         </div>
